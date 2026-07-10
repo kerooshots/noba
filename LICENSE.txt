@@ -1,0 +1,6 @@
+Copyright © 2026 Carlos Studio. All rights reserved.
+
+This repository and website are a private design concept. No license is granted.
+You may not copy, reproduce, modify, publish, distribute, sublicense, sell, deploy, or use any portion of the source code, design, layout, text, graphics, or other materials without prior written permission from Carlos Studio.
+
+Viewing the demo does not transfer ownership or grant usage rights.

@@ -23,6 +23,16 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 
-// Basic demo deterrents. These discourage casual copying but do not provide absolute protection.
-document.addEventListener('contextmenu', event => event.preventDefault());
-document.addEventListener('dragstart', event => event.preventDefault());
+// Protected demo gate and basic copy deterrence.
+const demoGate = document.getElementById('demoGate');
+const enterDemo = document.getElementById('enterDemo');
+if (enterDemo && demoGate) {
+  enterDemo.addEventListener('click', () => demoGate.classList.add('is-hidden'));
+}
+document.addEventListener('contextmenu', (event) => event.preventDefault());
+document.addEventListener('dragstart', (event) => event.preventDefault());
+document.addEventListener('keydown', (event) => {
+  const key = event.key.toLowerCase();
+  if ((event.ctrlKey || event.metaKey) && ['s','u','c'].includes(key)) event.preventDefault();
+  if (event.key === 'F12') event.preventDefault();
+});
